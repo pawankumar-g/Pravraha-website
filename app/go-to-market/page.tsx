@@ -21,8 +21,8 @@ export default function GoToMarketPage() {
             predictable revenue pipelines, and execute strategies that drive real business outcomes.
           </p>
 
-          <button className="bg-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition shadow-md">
-            Get Started
+          <button className="bg-orange-400 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition shadow-md">
+            Book a Demo
           </button>
         </div>
 
