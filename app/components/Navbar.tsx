@@ -4,12 +4,11 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-
-export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
+export default function Navbar(): React.JSX.Element {
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
 
   return (
-    <header className="w-full sticky top-0 z-50 backdrop-blur-lg bg-white/70 border-b border-gray-200 shadow-sm">
+    <header className="w-full sticky top-0 z-50 border-b border-gray-300 shadow-sm" style={{ backgroundColor: "#C4CECF" }}>
       
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-10 h-20">
 
@@ -42,20 +41,21 @@ export default function Navbar() {
               <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
             </span>
 
-            <div className="absolute top-full mt-3 left-0 w-96 bg-white shadow-2xl rounded-xl p-6 border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-
+            <div
+              className="absolute top-full mt-3 left-0 w-96 shadow-xl rounded-xl p-4 border border-gray-300 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+              style={{ backgroundColor: "#C4CECF" }}
+            >
               <Link
                 href="/go-to-market"
-                className="block hover:bg-gray-50 p-3 rounded-lg transition"
+                className="block px-3 py-3"
               >
                 <h3 className="font-semibold text-lg text-gray-900">
                   Go-to-Market Platform
                 </h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-700">
                   Accelerate market entry with automation & analytics.
                 </p>
               </Link>
-
             </div>
           </li>
 
@@ -66,37 +66,41 @@ export default function Navbar() {
               <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
             </span>
 
-            <div className="absolute top-full mt-3 left-0 w-96 bg-white shadow-2xl rounded-xl p-6 border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-
+            <div
+              className="absolute top-full mt-3 left-0 w-96 shadow-xl rounded-xl p-4 border border-gray-300 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+              style={{ backgroundColor: "#C4CECF" }}
+            >
               <Link
                 href="/services/b2b-lead-generation"
-                className="block hover:bg-gray-50 p-3 rounded-lg transition"
+                className="block px-3 py-3"
               >
                 <h3 className="font-semibold text-lg text-gray-900">
-                  B2B Lead Generation
+                  B2B Lead Generation Services
                 </h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-700">
                   High-quality, sales-ready leads using data-driven outreach.
                 </p>
               </Link>
-
             </div>
           </li>
 
           {/* Resources */}
           <li className="relative group">
-            <Link href="#" className="relative">
+            <span className="cursor-pointer relative">
               Resources
               <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
-            </Link>
+            </span>
 
-            <div className="absolute top-full mt-3 left-0 w-64 bg-white shadow-2xl rounded-xl p-4 border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <div
+              className="absolute top-full mt-3 left-0 w-64 shadow-xl rounded-xl p-3 border border-gray-300 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+              style={{ backgroundColor: "#C4CECF" }}
+            >
               <Link
                 href="/resources/blog"
-                className="block p-3 rounded-lg hover:bg-gray-100 transition"
+                className="block px-3 py-2"
               >
                 <h3 className="font-semibold text-gray-900">Blog</h3>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-gray-700">
                   Insights, trends, and company updates
                 </p>
               </Link>
@@ -110,26 +114,28 @@ export default function Navbar() {
               <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
             </span>
 
-            <div className="absolute top-full mt-3 left-0 w-72 bg-white shadow-2xl rounded-xl border overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-              
+            <div
+              className="absolute top-full mt-3 left-0 w-72 shadow-xl rounded-xl border border-gray-300 overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+              style={{ backgroundColor: "#C4CECF" }}
+            >
               <Link
                 href="/company/about"
-                className="block px-5 py-4 hover:bg-gray-50 transition"
+                className="block px-4 py-3"
               >
                 <h3 className="font-semibold text-gray-900">About Us</h3>
-                <p className="text-sm text-gray-500 mt-1">
+                <p className="text-sm text-gray-700 mt-1">
                   Our mission, vision, and leadership
                 </p>
               </Link>
 
-              <div className="h-px bg-gray-200"></div>
+              <div className="h-px bg-gray-300"></div>
 
               <Link
                 href="/company/contact"
-                className="block px-5 py-4 hover:bg-gray-50 transition"
+                className="block px-4 py-3"
               >
                 <h3 className="font-semibold text-gray-900">Contact</h3>
-                <p className="text-sm text-gray-500 mt-1">
+                <p className="text-sm text-gray-700 mt-1">
                   Talk to our team or request a demo
                 </p>
               </Link>
@@ -150,6 +156,7 @@ export default function Navbar() {
           <button
             className="md:hidden"
             onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle Menu"
           >
             <div className="space-y-1">
               <span className="block w-6 h-[2px] bg-gray-800"></span>
@@ -162,11 +169,11 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-200 shadow-lg">
-          <ul className="flex flex-col items-center gap-6 py-8 text-gray-700 font-medium">
+        <div className="md:hidden border-t border-gray-300 shadow-lg" style={{ backgroundColor: "#C4CECF" }}>
+          <ul className="flex flex-col items-center gap-6 py-8 text-gray-800 font-medium">
             <li><Link href="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
             <li><Link href="/go-to-market" onClick={() => setMenuOpen(false)}>Go-to-Market Platform</Link></li>
-            <li><Link href="/services/b2b-lead-generation" onClick={() => setMenuOpen(false)}>B2B Lead Generation</Link></li>
+            <li><Link href="/services/b2b-lead-generation" onClick={() => setMenuOpen(false)}>B2B Lead Generation Services</Link></li>
             <li><Link href="/resources/blog" onClick={() => setMenuOpen(false)}>Blog</Link></li>
             <li><Link href="/company/about" onClick={() => setMenuOpen(false)}>About Us</Link></li>
             <li><Link href="/company/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
@@ -184,4 +191,3 @@ export default function Navbar() {
     </header>
   );
 }
-

@@ -45,7 +45,7 @@ export default function CtaSection() {
           </h2>
 
           <p className="text-gray-300 text-lg mb-8">
-            Smart. Scalable and Designed for teams that want results.
+            Smart and Scalable Designed for teams that want results.
           </p>
 
           <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-full shadow-lg transition">

@@ -147,7 +147,7 @@ export default function BlogPage() {
             <div className="text-center mt-10">
               <button
                 onClick={() => setVisibleCount(visibleCount + 2)}
-                className="px-6 py-3 bg-[#6F898B] text-white font-semibold rounded-xl shadow hover:bg-[#5f7a7c] transition"
+                className="px-6 py-3 bg-[#F5D76E]  text-white font-semibold rounded-xl shadow hover:bg-[#5f7a7c] transition"
               >
                 Load More
               </button>

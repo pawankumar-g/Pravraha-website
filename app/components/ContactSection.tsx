@@ -6,11 +6,9 @@ import { motion } from "framer-motion";
 export default function ContactSection() {
   const locations = [
     {
-      title: "Headquarter",
       address: "Arizona, USA",
     },
     {
-      title: "Delivery Center",
       address:
         "HEC Colony, Sector 3, Dhurwa, Ranchi, Jharkhand 834004",
     },
@@ -70,9 +68,9 @@ export default function ContactSection() {
     <section className="relative min-h-screen bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#111827] text-white py-20 px-6">
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row gap-16">
 
-        {/* ================= Left Side ================= */}
+        {/* Left Side */}
         <motion.div
-          className="flex-1 space-y-10"
+          className="flex-1 space-y-6"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -85,24 +83,21 @@ export default function ContactSection() {
           {locations.map((location, index) => (
             <motion.div
               key={index}
-              className="space-y-2 flex items-start gap-2"
+              className="flex items-start gap-3"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <MapPin className="text-[#D4AF37]" size={22} />
-              <div>
-                <h3 className="text-2xl font-semibold">
-                  {location.title}
-                </h3>
-                <p className="text-gray-300">{location.address}</p>
-              </div>
+              <MapPin className="text-[#D4AF37] mt-1" size={22} />
+              <p className="text-gray-300 leading-relaxed">
+                {location.address}
+              </p>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* ================= Form ================= */}
+        {/* Form */}
         <motion.div
           className="flex-1"
           initial={{ opacity: 0, x: 40 }}
@@ -175,7 +170,7 @@ export default function ContactSection() {
 
               <button
                 type="submit"
-                className="w-full rounded-full bg-[#D4AF37] px-6 py-3 font-semibold text-black hover:bg-[#c19b2e] transition"
+                className="w-full rounded-full bg-[#F5D76E] px-6 py-3 font-semibold text-black hover:bg-[#c19b2e] transition"
               >
                 Schedule a Consultant
               </button>

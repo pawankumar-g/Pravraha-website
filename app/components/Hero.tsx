@@ -5,17 +5,17 @@ import { useEffect, useState } from "react";
 
 const slides = [
   {
-    title: "PravRaha - Your end to end GTM Platform",
-    desc: "From first prospect to final signature",
+    title: "PravRaha  Your End-to-End GTM Platform",
+    desc: "From first prospect to final signature.",
     image: "/image.webp",
   },
   {
-    title: "The engine behind your next enterprise deal.",
+    title: "The Engine Behind Your Next Enterprise Deal",
     desc: "Identify, enrich, and engage your ideal buyers.",
     image: "/hero1.jpg",
   },
   {
-    title: "Sell your Products and Services with Confidence",
+    title: "Sell Your Products and Services with Confidence",
     desc: "Deploy, monitor, and scale AI-powered SaaS products with built-in intelligence, automation, and security.",
     image: "/backui.png",
   },
@@ -28,7 +28,7 @@ export default function HeroSlider() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 4000);
+    }, 7000);
 
     return () => clearInterval(interval);
   }, []);
@@ -68,7 +68,7 @@ export default function HeroSlider() {
 
               {/* CTA */}
               <div className="mt-8 flex gap-4">
-                <button className="bg-[#D4AF37] text-black px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition">
+                <button className="bg-[#F5D76E] text-black px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition">
                   Book a Demo
                 </button>
                 <button className="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-black transition">
