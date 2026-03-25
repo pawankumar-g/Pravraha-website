@@ -10,21 +10,29 @@ export default function GoToMarketPage() {
       <section className="max-w-7xl mx-auto px-6 lg:px-10 py-20 grid md:grid-cols-2 gap-12 items-center">
         
         {/* Left */}
-        <div>
-          <h1 className="text-4xl lg:text-5xl font-bold leading-tight mb-6">
-            <span className="text-[#D4AF37]">Go-to-Market</span> Platform
-          </h1>
+       <div>
+    <h1 className="text-4xl lg:text-5xl font-bold leading-tight mb-6">
+      <span className="text-[#D4AF37]">
+        The B2B Sales Intelligence & Outreach Platform That Books Meetings —
+      </span>{" "}
+      Not Just Delivers Data.
+    </h1>
 
-          <p className="text-lg text-gray-800 mb-6 leading-relaxed">
-            Launch and scale your products with our comprehensive go-to-market solution.
-            We help you validate opportunities, position your product effectively, build
-            predictable revenue pipelines, and execute strategies that drive real business outcomes.
-          </p>
+    {/* Sub-heading line (missing in your code) */}
+    <p className="text-lg text-[#D4AF37] font-medium mb-4">
+      Find, Enrich, and Reach Your Ideal B2B Buyers With SDR-Led Precision.
+    </p>
 
-          <button className="bg-[#F5D76E]  text-black px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition shadow-md">
-            Book a Demo
-          </button>
-        </div>
+    <p className="text-lg text-gray-800 mb-6 leading-relaxed">
+      PravRaha combines a proprietary B2B contact database, intent-based account
+      targeting, and an SDR-led outreach engine so your team stops chasing cold
+      lists and starts booking meetings with decision-makers who are ready to buy.
+    </p>
+
+    <button className="bg-[#F5D76E] text-black px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition shadow-md">
+      Book a Strategy Call
+    </button>
+  </div>
 
         {/* Right Image */}
         <div className="relative w-full h-[300px] md:h-[400px]">
@@ -42,21 +50,29 @@ export default function GoToMarketPage() {
       <section className="bg-[#014D4E] text-white py-10">
         <div className="max-w-4xl mx-auto text-center px-6">
           <p className="text-lg leading-relaxed">
-Accelerate growth with our end-to-end go-to-market framework. From opportunity validation to market positioning, we help you design scalable revenue engines, optimize customer acquisition, and execute strategies that deliver measurable business impact.          </p>
+          PravRaha combines proprietary B2B contact data, buyer intent signals, and SDR-led outbound prospecting in a single GTM platform built for growth-stage B2B SaaS companies who want pipeline, not just data          </p>
         </div>
       </section>
 
       {/* FEATURES SECTION */}
       <section className="max-w-7xl mx-auto px-6 lg:px-10 py-20">
 
-        <div className="text-center mb-14">
-          <h1 className="text-4xl lg:text-5xl font-bold leading-tight mb-6">
-            Everything You Need to Launch Successfully
-          </h1>
-          <p className="text-gray-800 text-lg">
-            Our platform provides all the tools and insights for a successful market entry.
-          </p>
-        </div>
+         <div className="text-center mb-14">
+    <h1 className="text-4xl lg:text-5xl font-bold leading-tight mb-6">
+      Everything Your Sales Team Needs to Fill the Pipeline
+    </h1>
+
+    {/* Subheading */}
+    <p className="text-[#c8a46a] font-semibold text-sm lg:text-base mb-3 tracking-wide uppercase">
+      The B2B Lead Generation Platform That Doesn&apos;t Stop at Data
+    </p>
+
+    <p className="text-gray-800 text-lg max-w-3xl mx-auto">
+      From ICP targeting to booked meetings — PravRaha&apos;s data, enrichment,
+      and SDR outreach capabilities work together so your team spends less time
+      prospecting and more time closing deals.
+    </p>
+  </div>
 
         <div className="grid md:grid-cols-2 gap-10">
 
@@ -170,7 +186,7 @@ Accelerate growth with our end-to-end go-to-market framework. From opportunity v
       </section>
 
       {/* CTA SECTION */}
-      <section className="bg-white py-16">
+      {/* <section className="bg-white py-16">
         <div className="max-w-4xl mx-auto text-center px-6">
 
           <h2 className="text-3xl font-bold mb-4">
@@ -186,14 +202,14 @@ Accelerate growth with our end-to-end go-to-market framework. From opportunity v
           </button>
 
         </div>
-      </section>
+      </section> */}
 
       {/* HOW IT WORKS */}
       <section className="bg-gradient-to-b from-yellow-50 to-white py-20 border-t">
         <div className="max-w-7xl mx-auto px-6">
           
           <h2 className="text-4xl font-extrabold text-center mb-16 text-gray-800">
-            How It Works
+            How PravRaha Fills Your B2B Pipeline in 4 Steps
           </h2>
 
           <div className="grid md:grid-cols-4 gap-10 text-center">
@@ -202,7 +218,7 @@ Accelerate growth with our end-to-end go-to-market framework. From opportunity v
               <div className="text-4xl mb-4">🔍</div>
               <h3 className="font-semibold text-lg mb-2 text-gray-800">1. Research</h3>
               <p className="text-[#D4AF37] text-base">
-                Analyze your market and competitors to find opportunities.
+                We define your ideal customer profile, size your total addressable market, and build a precision account list of your highest-value prospects before outreach begins.
               </p>
             </div>
 
@@ -210,7 +226,7 @@ Accelerate growth with our end-to-end go-to-market framework. From opportunity v
               <div className="text-4xl mb-4">🎯</div>
               <h3 className="font-semibold text-lg mb-2 text-gray-800">2. Position</h3>
               <p className="text-[#D4AF37] text-base">
-                Define your unique value proposition clearly and effectively.
+                Our B2B data engine surfaces in-market buyers from your target accounts then enriches every contact with verified emails, mobile numbers, tech stack, funding signals, and buying intent
               </p>
             </div>
 
@@ -218,7 +234,7 @@ Accelerate growth with our end-to-end go-to-market framework. From opportunity v
               <div className="text-4xl mb-4">🚀</div>
               <h3 className="font-semibold text-lg mb-2 text-gray-800">3. Launch</h3>
               <p className="text-[#D4AF37] text-base">
-                Execute campaigns and sales strategies for growth.
+                Our trained SDR team runs personalised cold email, LinkedIn, and phone sequences on your behalf — timed to buying signals, targeted to decision-makers, and engineered to book meetings.
               </p>
             </div>
 
@@ -226,7 +242,7 @@ Accelerate growth with our end-to-end go-to-market framework. From opportunity v
               <div className="text-4xl mb-4">📈</div>
               <h3 className="font-semibold text-lg mb-2 text-gray-800">4. Optimize</h3>
               <p className="text-[#D4AF37] text-base">
-                Track performance and continuously improve results.
+                Track open rates, reply rates, meeting bookings, and pipeline value in real time. We iterate your sequences, refine your ICP, and double down on the accounts and signals converting best.
               </p>
             </div>
 

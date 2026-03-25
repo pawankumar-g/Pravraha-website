@@ -23,18 +23,25 @@ const slides = [
 
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   // Auto slide
   useEffect(() => {
+    if (isPaused) return;
+
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
     }, 7000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isPaused]);
 
   return (
-    <section className="relative h-[89vh] overflow-hidden">
+    <section 
+      className="relative h-[89vh] overflow-hidden"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
       {/* Slides */}
       {slides.map((slide, index) => (
         <div

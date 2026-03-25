@@ -1,10 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, MapPin, Phone, Clock, ChevronDown, ChevronUp } from "lucide-react";
+import { Mail, Phone, ChevronDown, ChevronUp } from "lucide-react";
 import ContactSection from "@/app/components/ContactSection";
 import Footer from "@/app/components/Footer";
-import { motion } from "framer-motion";
 
 export default function ContactPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -13,22 +12,64 @@ export default function ContactPage() {
     {
       question: "What services does PravRaha offer?",
       answer:
-        "PravRaha specializes in B2B Lead Generation, Technology Services (including custom software development, cloud solutions, and AI integration), and specialized Staffing services to help businesses scale efficiently.",
+        "PravRaha is a full-stack B2B lead generation platform offering four core services: ICP-based account targeting, B2B contact data enrichment (verified emails, mobile numbers, intent signals, technographic data), SDR-led multichannel outreach (cold email, LinkedIn, phone), and B2B appointment setting. Together, these services take a growth-stage B2B SaaS company from prospect list to booked meetings without needing to build or manage an in-house SDR function.",
     },
     {
       question: "How can I get a consultation?",
       answer:
-        "You can schedule a consultation by filling out the contact form on this page, sending us an email at support@pravraha.com, or calling us during business hours.",
+        "You can schedule a consultation by filling out the contact form or sending us an email at support@pravraha.com",
     },
     {
       question: "Where are your offices located?",
       answer:
-        "Our headquarters is in Scottsdale, Arizona, USA, and we have a global delivery center in Ranchi, Jharkhand, India.",
+        "We are located in Scottsdale, Arizona, USA and Ranchi, Jharkhand, India.",
     },
     {
       question: "What makes your lead generation different?",
-      answer:
-        "Our lead generation is data-driven and highly targeted using advanced analytics and intent data.",
+      answer: (
+        <div className="space-y-4 text-gray-600">
+          <p className="font-semibold text-gray-800">
+            Five things separate PravRaha from every other B2B lead generation tool or agency:
+          </p>
+
+          <ol className="list-decimal pl-5 space-y-4">
+            <li>
+              <strong>We execute the outreach for you.</strong>
+              <br />
+              Most data platforms give you a contact list and leave the rest to your team.
+              PravRaha’s trained SDR team runs the full outreach — cold email, LinkedIn, and phone on your behalf.
+            </li>
+
+            <li>
+              <strong>We use real buying signals, not just contact data.</strong>
+              <br />
+              Our prospecting is timed to intent triggers such as job changes, funding rounds, hiring signals, and tech stack shifts,
+              so we reach prospects when they are actually in-market.
+            </li>
+
+            <li>
+              <strong>We cover the entire GTM motion.</strong>
+              <br />
+              From ICP definition and contact sourcing to multi-layer enrichment, personalised sequences,
+              meeting booking, and pre-call briefs — one partner, one process, no gaps.
+            </li>
+
+            <li>
+              <strong>We measure success by meetings booked, not emails sent.</strong>
+              <br />
+              We don’t rely on vanity metrics. Every campaign is tracked using open rates,
+              reply rates, and qualified meetings delivered.
+            </li>
+
+            <li>
+              <strong>We operate with full transparency.</strong>
+              <br />
+              Weekly reporting shows every account targeted, every sequence running,
+              and every result — with no black box and no guesswork.
+            </li>
+          </ol>
+        </div>
+      ),
     },
   ];
 
@@ -38,7 +79,6 @@ export default function ContactPage() {
 
   return (
     <main className="bg-[#f7f7f7] text-gray-800">
-
       {/* HERO SECTION */}
       <section className="relative py-24 px-6 text-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-100 to-gray-200"></div>
@@ -55,96 +95,67 @@ export default function ContactPage() {
           <div className="w-16 h-1 bg-[#c8a46a] mx-auto mt-4 rounded"></div>
 
           <p className="mt-6 text-gray-600 text-lg leading-relaxed">
-            Whether you have a question, need a consultation, or want to discuss a project,
-            our team is ready to help.
+            Whether you have a question, need a consultation, or want to
+            discuss a project, our team is ready to help.
           </p>
         </div>
       </section>
 
-      {/* CONTACT SECTION (UPGRADED) */}
+      {/* CONTACT SECTION */}
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
-
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold">Get In Touch</h2>
             <div className="w-16 h-1 bg-[#c8a46a] mx-auto mt-3 rounded"></div>
           </div>
 
-          {/* CARDS */}
-          <div className="grid md:grid-cols-3 gap-8">
-
-            {/* EMAIL */}
-            <div className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition border">
+          <div className="grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            <div className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition border flex flex-col">
               <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-[#c8a46a]/10 text-[#c8a46a] mb-6">
                 <Mail size={28} />
               </div>
+
               <h3 className="text-xl font-semibold">Email</h3>
-              <p className="text-gray-500 mt-2">General inquiries & support</p>
-              <p className="mt-4 font-medium">support@pravraha.com</p>
+              <p className="text-gray-500 mt-2 flex-grow">
+                General inquiries & support
+              </p>
+
+              <a
+                href="mailto:support@pravraha.com"
+                className="mt-4 font-medium text-[#c8a46a] hover:underline block"
+              >
+                support@pravraha.com
+              </a>
             </div>
 
-            {/* PHONE */}
-            <div className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition border">
+            <div className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition border flex flex-col">
               <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-[#6c8486]/10 text-[#6c8486] mb-6">
                 <Phone size={28} />
               </div>
+
               <h3 className="text-xl font-semibold">Phone</h3>
-              <p className="text-gray-500 mt-2">Customer support</p>
-              <p className="mt-4 font-medium">+1 (555) 123-4567</p>
-            </div>
+              <p className="text-gray-500 mt-2 flex-grow">
+                Customer support
+              </p>
 
-            {/* HOURS */}
-            <div className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition border">
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gray-200 text-gray-700 mb-6">
-                <Clock size={28} />
-              </div>
-              <h3 className="text-xl font-semibold">Working Hours</h3>
-              <p className="text-gray-500 mt-2">Availability</p>
-              <p className="mt-4 font-medium">Mon - Fri: 9AM – 6PM</p>
-            </div>
-
-          </div>
-
-          {/* COMPANY INFO PANEL */}
-          <div className="mt-16 bg-gradient-to-r from-[#6c8486] to-[#4f6364] text-white rounded-3xl p-10 shadow-xl">
-            <div className="grid md:grid-cols-2 gap-10 items-center">
-
-              <div>
-                <h3 className="text-2xl font-semibold mb-4">
-                  Pravraha Technologies
-                </h3>
-
-                <p className="text-white/90 leading-relaxed">
-                  We are a product-focused company delivering scalable digital solutions
-                  across global markets with strong expertise in lead generation and technology services.
-                </p>
-
-                <div className="mt-6 space-y-2 text-white/90">
-                  <p><strong>Headquarters:</strong> Arizona, USA</p>
-                  <p><strong>Delivery Center:</strong> Ranchi, India</p>
-                </div>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
-                <h4 className="text-lg font-semibold mb-4">Quick Info</h4>
-
-                <div className="space-y-3 text-sm">
-                  <p><strong>Email:</strong> support@pravraha.com</p>
-                  <p><strong>Phone:</strong> +1 (555) 123-4567</p>
-                  <p><strong>Hours:</strong> Mon - Fri, 9AM - 6PM</p>
-                </div>
-              </div>
-
+              <a
+                href="tel:+15551234567"
+                className="mt-4 font-medium text-[#6c8486] hover:underline block"
+              >
+                xxxxxxxxxx
+              </a>
             </div>
           </div>
-
         </div>
       </section>
 
       {/* FAQ SECTION */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center">Frequently Asked Questions</h2>
+          <h2 className="text-3xl font-bold text-center">
+            Frequently Asked Questions
+          </h2>
+
           <div className="w-16 h-1 bg-[#c8a46a] mx-auto mt-3 mb-12 rounded"></div>
 
           <div className="space-y-4">
@@ -162,6 +173,7 @@ export default function ContactPage() {
                   className="w-full flex justify-between items-center px-6 py-5 text-left"
                 >
                   <span className="font-medium text-lg">{faq.question}</span>
+
                   {openIndex === index ? (
                     <ChevronUp className="text-[#c8a46a]" />
                   ) : (
@@ -186,3 +198,4 @@ export default function ContactPage() {
     </main>
   );
 }
+

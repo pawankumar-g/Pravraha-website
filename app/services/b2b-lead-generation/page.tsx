@@ -8,23 +8,23 @@ import { motion } from "framer-motion";
 
 const features = [
   {
-    title: "ICP & Persona Development",
-    desc: "Define your ideal customers and target only high-quality prospects.",
+    title: "Ideal Customer Profile (ICP) Definition & Account Targeting",
+    desc: "We map your ideal customer profile using firmographic, technographic, and behavioural filters then build a precision target account list sized to your TAM, so every outreach dollar goes to accounts that can actually buy",
     icon: Target,
   },
   {
-    title: "Multi-Channel Outreach",
-    desc: "Reach prospects via Email, LinkedIn, and Calls with automation.",
+    title: "SDR-Led Multi-Channel Outreach",
+    desc: "Our trained SDRs run personalised cold email, LinkedIn, and phone sequences on your behalf crafted to your ICP, timed to buying signals, and written to start real conversations with decision-makers",
     icon: Users,
   },
   {
-    title: "Intent Data Analysis",
-    desc: "Engage prospects at the right time using behavioral insights.",
+    title: "Buyer Intent Data & In-Market Account Signals",
+    desc: "We track job changes, funding rounds, hiring signals, tech stack shifts, and web behavioural data to identify accounts showing active buying intent so your SDRs reach out when prospects are in-market, not just on a list",
     icon: Bot,
   },
   {
-    title: "Appointment Setting",
-    desc: "Book qualified meetings directly into your sales calendar.",
+    title: "B2B Appointment Setting & Meeting Booking",
+    desc: "Our SDRs handle the full outreach cycle and deliver sales-qualified meetings with verified decision-makers booked directly into your calendar, with a pre-call brief so your AE walks in prepared",
     icon: BarChart3,
   },
 ];
@@ -56,11 +56,10 @@ export default function Page() {
       <section className="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-10 items-center">
         <div>
           <h1 className="text-5xl font-bold leading-tight mb-6">
-            B2B Lead Generation Services
+            B2B Lead Generation Services 
           </h1>
           <p className="text-lg text-gray-700 mb-6">
-            Fill your pipeline with high-quality, sales-ready leads using
-            data-driven strategies and automation.
+           PravRaha is a B2B lead generation service that combines proprietary contact data, intent-based account targeting, and SDR-led outbound prospecting built for SaaS and tech companies that want qualified meetings, not just contact lists.
           </p>
           <button className="bg-black text-white px-6 py-3 rounded-xl shadow-lg hover:scale-105 transition">
             Get Started
@@ -80,11 +79,11 @@ export default function Page() {
       <section className="bg-gradient-to-b from-gray-50 to-white py-24">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-5xl font-bold mb-6 text-gray-900">
-            A Smarter Way to Generate Leads
+            B2B Lead Generation Services That Go From Data to Booked Meetings
           </h2>
 
           <p className="text-lg text-gray-600 mb-20 max-w-2xl mx-auto">
-            We combine strategy, data, and automation to deliver consistent, scalable growth.
+            Proprietary B2B contact data. Intent-based account targeting. SDR-executed outreach. One platform, precision prospecting, and meetings on your calendar
           </p>
 
           <div className="grid md:grid-cols-4 gap-10">

@@ -49,7 +49,7 @@ export default function CtaSection() {
           </p>
 
           <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-full shadow-lg transition">
-            Get Started Today
+            Book a Strategy Call
           </button>
         </div>
       </div>
