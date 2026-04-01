@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { Mail, Phone, ChevronDown, ChevronUp } from "lucide-react";
 import ContactSection from "@/app/components/ContactSection";
-import Footer from "@/app/components/Footer";
 
 export default function ContactPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -194,7 +193,6 @@ export default function ContactPage() {
       </section>
 
       <ContactSection />
-      <Footer />
     </main>
   );
 }

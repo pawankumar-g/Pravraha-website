@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import Footer from "@/app/components/Footer";
 import ContactSection from "@/app/components/ContactSection";
 import { Target, Users, Bot, BarChart3 } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const features = [
   {
@@ -28,6 +28,14 @@ const features = [
     icon: BarChart3,
   },
 ];
+
+
+const scrollToContact = () => {
+  const section = document.getElementById("contact");
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+};
 
 const steps = [
   {
@@ -61,18 +69,24 @@ export default function Page() {
           <p className="text-lg text-gray-700 mb-6">
            PravRaha is a B2B lead generation service that combines proprietary contact data, intent-based account targeting, and SDR-led outbound prospecting built for SaaS and tech companies that want qualified meetings, not just contact lists.
           </p>
-          <button className="bg-black text-white px-6 py-3 rounded-xl shadow-lg hover:scale-105 transition">
-            Get Started
-          </button>
+        <button
+  onClick={scrollToContact}
+  className="bg-black text-white px-6 py-3 rounded-xl shadow-lg hover:scale-105 transition"
+>
+  Book a Strategy Call
+</button>
         </div>
 
-        <div className="rounded-3xl overflow-hidden shadow-xl">
-          <img
-            src="/B2B.jpg"
-            alt="Team Meeting"
-            className="w-full h-full object-cover"
-          />
-        </div>
+       <div className="rounded-3xl overflow-hidden shadow-xl relative w-full h-[420px]">
+  <Image
+    src="/B2B.jpg"
+    alt="Team Meeting"
+    fill
+    className="object-cover"
+    sizes="(max-width: 768px) 100vw, 50vw"
+    priority
+  />
+</div>
       </section>
 
       {/* FEATURES */}
@@ -197,9 +211,6 @@ export default function Page() {
           Book a Call
         </button>
       </section>
-
-      {/* FOOTER */}
-      <Footer />
 
     </div>
   );

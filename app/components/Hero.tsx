@@ -31,10 +31,18 @@ export default function HeroSlider() {
 
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 7000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [isPaused]);
+
+const scrollToContact = () => {
+  const section = document.getElementById("contact");
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
 
   return (
     <section 
@@ -75,12 +83,15 @@ export default function HeroSlider() {
 
               {/* CTA */}
               <div className="mt-8 flex gap-4">
-                <button className="bg-[#F5D76E] text-black px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition">
-                  Book a Demo
-                </button>
-                <button className="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-black transition">
+               <button
+  onClick={scrollToContact}
+  className="bg-[#F5D76E] text-black px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition"
+>
+  Book a Demo
+</button>
+                {/* <button className="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-black transition">
                   Learn More
-                </button>
+                </button> */}
               </div>
             </div>
           </div>

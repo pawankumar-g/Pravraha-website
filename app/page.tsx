@@ -4,7 +4,6 @@ import ProductsSection from "./components/ProductsSection";
 import ContactSection from "./components/ContactSection";
 import LogoMarquee from "./components/LogoMarquee";
 import CtaMain from "./components/CtaMain";
-import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -15,10 +14,6 @@ export default function Home() {
       <LogoMarquee />
       <ContactSection />
       <CtaMain />
-      
-
-    
-      <Footer />
     </>
   );
 }

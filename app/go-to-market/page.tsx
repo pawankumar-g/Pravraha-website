@@ -1,6 +1,5 @@
 import Image from "next/image";
 import ContactSection from "../components/ContactSection";
-import Footer from "../components/Footer";
 
 export default function GoToMarketPage() {
   return (
@@ -13,9 +12,9 @@ export default function GoToMarketPage() {
        <div>
     <h1 className="text-4xl lg:text-5xl font-bold leading-tight mb-6">
       <span className="text-[#D4AF37]">
-        The B2B Sales Intelligence & Outreach Platform That Books Meetings —
+        The B2B Sales Intelligence & Outreach Platform
       </span>{" "}
-      Not Just Delivers Data.
+      
     </h1>
 
     {/* Sub-heading line (missing in your code) */}
@@ -29,9 +28,24 @@ export default function GoToMarketPage() {
       lists and starts booking meetings with decision-makers who are ready to buy.
     </p>
 
-    <button className="bg-[#F5D76E] text-black px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition shadow-md">
+    <div className="flex flex-wrap gap-4">
+  <a href="#contact">
+    <button className="bg-[#F5D76E] text-black px-6 py-3 rounded-full font-semibold hover:bg-orange-200 transition shadow-md">
       Book a Strategy Call
     </button>
+  </a>
+
+  <a href="#how-it-works">
+    <button
+      className="px-6 py-3 rounded-full font-semibold 
+      text-[#32535d] border border-[#32535d] 
+      hover:bg-[#32535d] hover:text-white 
+      transition duration-300"
+    >
+      Learn More
+    </button>
+  </a>
+</div>
   </div>
 
         {/* Right Image */}
@@ -185,27 +199,11 @@ export default function GoToMarketPage() {
         </div>
       </section>
 
-      {/* CTA SECTION */}
-      {/* <section className="bg-white py-16">
-        <div className="max-w-4xl mx-auto text-center px-6">
-
-          <h2 className="text-3xl font-bold mb-4">
-            Ready to Accelerate Your Growth?
-          </h2>
-
-          <p className="text-gray-600 mb-6">
-            Start building your go-to-market strategy today and unlock predictable revenue.
-          </p>
-
-          <button className="bg-orange-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-600 transition shadow-md">
-            Request Demo
-          </button>
-
-        </div>
-      </section> */}
-
+    
       {/* HOW IT WORKS */}
-      <section className="bg-gradient-to-b from-yellow-50 to-white py-20 border-t">
+      <section
+      id="how-it-works"
+      className="bg-gradient-to-b from-yellow-50 to-white py-20 border-t">
         <div className="max-w-7xl mx-auto px-6">
           
           <h2 className="text-4xl font-extrabold text-center mb-16 text-gray-800">
@@ -251,7 +249,6 @@ export default function GoToMarketPage() {
       </section>
 
       <ContactSection />
-      <Footer />
 
     </main>
   );

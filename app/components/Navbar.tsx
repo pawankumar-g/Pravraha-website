@@ -146,7 +146,9 @@ export default function Navbar(): React.JSX.Element {
         {/* Right Side */}
         <div className="flex items-center gap-4">
           <Link
-            href="/dashboard"
+            // href="/dashboard"
+               href="/login"
+
             className="hidden md:inline-flex bg-orange-500 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-orange-600 transition shadow-lg"
           >
             Get Started

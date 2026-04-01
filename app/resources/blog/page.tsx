@@ -227,7 +227,6 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import Footer from "@/app/components/Footer";
 
 export default function BlogPage() {
   const [search, setSearch] = useState("");
@@ -402,7 +401,6 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 }
